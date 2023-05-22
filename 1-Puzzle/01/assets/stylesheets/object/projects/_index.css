@@ -1,0 +1,79 @@
+/* 共通スタイルは外に書く */
+.box-1 {
+  height: 100px;
+
+}
+
+.box-2 {
+  height: 250px;
+}
+
+.box-3 {
+  height: 250px;
+}
+
+.box-4 {
+  height: 100px;
+}
+
+@media screen and (min-width: 796px) {
+
+  /* pc用スタイル */
+  .container {
+    width: 400px;
+    margin: auto;
+  }
+
+  .container-inner {
+    display: flex;
+  }
+
+  .box-1 {
+    background-color: #141f40;
+  }
+
+  .box-2 {
+    background-color: #80bfa8;
+
+    width: 150px;
+  }
+
+  .box-3 {
+    background-color: #8c2727;
+    width: 250px;
+  }
+
+  .box-4 {
+    background-color: #d98d30;
+  }
+
+
+}
+
+@media screen and (max-width: 795px) {
+  /* sp用スタイル */
+
+  .box-1 {
+    background-color: #e91e63;
+  }
+
+  .box-2 {
+    background-color: #0093b7;
+    width: 100%;
+  }
+
+  .box-3 {
+    background-color: #dbd400;
+    width: 100%;
+  }
+
+  .box-4 {
+    background-color: #170e38;
+  }
+
+  .container-inner {
+    display: block;
+  }
+
+
+}
