@@ -1,0 +1,52 @@
+.p-index {
+  font-size: 20px;
+}
+
+.p-index__articleWrap {
+  background-color: #ddd;
+  margin-top: 50px;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+.p-col-title {
+  margin: 30px 0;
+  font-weight: normal;
+}
+
+.p-1col-title {
+  max-width: 1200px;
+  font-weight: normal;
+  margin: 30px 0;
+}
+
+.p-col {
+  display:flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1280px;
+}
+
+.p-col-text {
+  max-width: 1200px;
+}
+
+.p-col-text2 {
+  max-width: 300px;
+}
+
+.p-col-title {
+  max-width: 300px;
+}
+/* flexの折り返し */
+.p-col:last-child {
+  flex-wrap: wrap-reverse;
+}
+/* 3番目と4番目cardを1番目2番目に */
+.p-col:last-child .p-card2:nth-child(n+1):nth-child(-n+2) {
+  order: 1;
+}
+
