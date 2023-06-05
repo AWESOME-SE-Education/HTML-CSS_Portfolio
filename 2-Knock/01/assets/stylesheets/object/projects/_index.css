@@ -7,46 +7,84 @@
   margin-top: 50px;
 }
 
-hr {
-  margin: 30px 0;
-}
-
-.p-col-title {
-  margin: 30px 0;
-  font-weight: normal;
-}
-
-.p-1col-title {
-  max-width: 1200px;
-  font-weight: normal;
-  margin: 30px 0;
-}
-
 .p-col {
-  display:flex;
+  display: flex;
+  border-bottom: solid 1px;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 30px 0;
+  max-width:1000px
+}
+
+.p-content {
   max-width: 1280px;
+  
 }
 
-.p-col-text {
-  max-width: 1200px;
+.p-col:nth-child(-n+3) {
+  width: 1200px;
 }
 
-.p-col-text2 {
-  max-width: 300px;
+.p-card {
+  width: 300px;
+  margin: 0 auto;
 }
 
-.p-col-title {
-  max-width: 300px;
+.p-pcimg {
+  display: block;
 }
+
+.p-spimg {
+  display: none;
+}
+
+.p-title {
+  margin: 20px 0;
+}
+
 /* flexの折り返し */
 .p-col:last-child {
   flex-wrap: wrap-reverse;
 }
 /* 3番目と4番目cardを1番目2番目に */
-.p-col:last-child .p-card2:nth-child(n+1):nth-child(-n+2) {
+.p-col:last-child .p-card:nth-child(n+1):nth-child(-n+2) {
   order: 1;
 }
+/* 一番下のボーダー消す */
+  .p-col:last-child {
+    border-bottom: none;
+  }
 
+/* SP 画面サイズが795px以下 */
+@media screen and (max-width: 795px) {
+  .p-pcimg {
+    display: none;
+  }
+  
+  .p-spimg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .p-col:nth-child(n+3) {
+    display: none;
+  }
+
+  .p-col {
+    display: block;
+  }
+
+  .p-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .p-card img {
+    margin: 0 auto;
+  }
+
+  .p-col:nth-child(n+2) {
+    border-bottom: none;
+  }
+}
