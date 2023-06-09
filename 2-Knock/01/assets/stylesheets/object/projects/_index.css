@@ -1,3 +1,4 @@
+/* 共通 */
 .p-index {
   font-size: 20px;
 }
@@ -19,23 +20,27 @@
 .p-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .p-card {
-  width: 300px;
-}
-
-.p-pcimg {
-  display: block;
-}
-
-.p-spimg {
-  display: none;
+  max-width: 300px;
+  width: 30%;
 }
 
 .p-title {
   margin: 20px 0;
 }
+
+/* PC 画面サイズが796px以上 */
+  @media screen and (min-width: 796px) {
+    .p-pcimg {
+      display: block;
+    }
+    
+    .p-spimg {
+      display: none;
+    }
 
 /* flexの折り返し */
 .p-col:last-child {
@@ -48,6 +53,7 @@
 /* 一番下のボーダー消す */
   .p-col:last-child {
     border-bottom: none;
+  }
   }
 
 /* SP 画面サイズが795px以下 */
@@ -66,10 +72,11 @@
   }
 
   .p-col {
-    display: block;
+    flex-direction: column;
   }
 
   .p-card {
+    max-width: initial;
     width: 100%;
     text-align: center;
   }
