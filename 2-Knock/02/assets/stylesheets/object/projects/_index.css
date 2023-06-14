@@ -1,0 +1,59 @@
+/* 共通 */
+.p-index {
+  font-size: 20px;
+}
+
+.p-index__articleWrap {
+  background-color: #ddd;
+  margin-top: 50px;
+}
+
+.p-col {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.p-img {
+  height: 200px;
+}
+
+.p-card:first-child {
+  border-bottom: solid 1px;
+  padding-bottom: 50px;
+}
+
+/* PC 画面サイズが796px以上 */
+@media screen and (min-width: 796px) {
+  .p-card {
+    display: flex;
+    gap: 30px;
+    margin: 50px 0;
+  }
+
+  .p-card:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* SP 画面サイズが795px以下 */
+@media screen and (max-width: 795px) {
+  .p-card {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .p-title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 23px;
+  }
+
+  .p-text {
+    text-align: center;
+  }
+
+  .p-img {
+    margin: 0 auto;
+  }
+}
