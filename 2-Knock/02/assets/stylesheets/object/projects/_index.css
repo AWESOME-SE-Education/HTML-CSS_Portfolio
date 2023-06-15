@@ -29,6 +29,7 @@
     display: flex;
     gap: 30px;
     margin: 50px 0;
+    align-items: center;
   }
 
   .p-card:nth-child(3) {
