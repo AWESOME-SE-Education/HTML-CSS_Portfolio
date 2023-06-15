@@ -1,0 +1,91 @@
+/* 共通 */
+.p-index {
+  font-size: 20px;
+}
+
+.p-index__articleWrap {
+  background-color: #ddd;
+  margin-top: 50px;
+}
+
+.p-col {
+  display: flex;
+  border-bottom: solid 1px;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 0;
+  justify-content: center;
+}
+/* 全体のコンテンツ幅の指定と左右中央寄せ */
+.p-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.p-card {
+  max-width: 300px;
+  width: 30%;
+}
+
+.p-title {
+  margin: 20px 0;
+}
+
+/* PC 画面サイズが796px以上 */
+  @media screen and (min-width: 796px) {
+    .p-pcimg {
+      display: block;
+    }
+    
+    .p-spimg {
+      display: none;
+    }
+
+/* flexの折り返し */
+.p-col:last-child {
+  flex-wrap: wrap-reverse;
+}
+/* 3番目と4番目cardを1番目2番目に */
+.p-col:last-child .p-card:nth-child(n+1):nth-child(-n+2) {
+  order: 1;
+}
+/* 一番下のボーダー消す */
+  .p-col:last-child {
+    border-bottom: none;
+  }
+  }
+
+/* SP 画面サイズが795px以下 */
+@media screen and (max-width: 795px) {
+  .p-pcimg {
+    display: none;
+  }
+  
+  .p-spimg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .p-col:nth-child(n+3) {
+    display: none;
+  }
+
+  .p-col {
+    flex-direction: column;
+  }
+
+  .p-card {
+    max-width: initial;
+    width: 100%;
+    text-align: center;
+  }
+
+  .p-card img {
+    margin: 0 auto;
+  }
+
+  .p-col:nth-child(n+2) {
+    border-bottom: none;
+  }
+}

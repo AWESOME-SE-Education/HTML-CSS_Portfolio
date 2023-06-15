@@ -1,0 +1,99 @@
+/* 共通スタイルは外に書く */
+.p-box-1 {
+  height: 100px;
+}
+
+.p-box-2 {
+  height: 250px;
+}
+
+.p-box-3 {
+  height: 250px;
+}
+
+.p-box-4 {
+  height: 100px;
+}
+
+  .p-text {
+  padding: 20px;
+}
+
+@media screen and (min-width: 796px) {
+
+  /* pc用スタイル */
+  .p-container {
+    width: 400px;
+    margin: auto;
+  }
+
+  .p-box-1 {
+    background-color: #141f40;
+  }
+
+  .p-box-2 {
+    background-color: #80bfa8;
+    width: 150px;
+  }
+
+  .p-container-inner {
+    display: flex;
+  }
+
+  .p-box-3 {
+    background-color: #8c2727;
+    width: 250px;
+  }
+
+  .p-box-4 {
+    background-color: #d98d30;
+  }
+
+  /* テキスト */
+  .p-sidebar {
+    color: #f00;
+    font-size: 20px;
+  }
+
+  .p-maincontent {
+    color: #00f;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 795px) {
+
+  /* sp用スタイル */
+  .p-container-inner {
+    display: block;
+  }
+
+  .p-box-1 {
+    background-color: #e91e63;
+  }
+
+  .p-box-2 {
+    background-color: #0093b7;
+    width: 100%;
+  }
+
+  .p-box-3 {
+    background-color: #dbd400;
+    width: 100%;
+  }
+
+  .p-box-4 {
+    background-color: #170e38;
+  }
+
+  /* テキスト */
+  .p-sidebar {
+    color: #00f;
+    font-size: 15px;
+  }
+
+  .p-maincontent {
+    color: #f00;
+    font-size: 15px;
+  }
+}
